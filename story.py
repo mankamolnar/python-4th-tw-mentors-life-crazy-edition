@@ -58,7 +58,7 @@ def main():
     time.sleep(5)
     fk.massage_lama(sanyi)
     time.sleep(5)
-
+    sanyi.lama_goes_insane(codecool_bp)
     codecool_bp.print_goodbye_message()
 
 if __name__ == '__main__':

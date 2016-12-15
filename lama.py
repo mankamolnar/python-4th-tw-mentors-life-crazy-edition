@@ -1,3 +1,7 @@
+import random
+from codecool_class import *
+
+
 class Lama:
 
     def __init__(self, name, color):
@@ -23,3 +27,12 @@ class Lama:
     def check_if_dead(self):
         if self.softness < 1:
             print("%s is dead :(" % self.name)
+
+    def lama_goes_insane(self, codecool_class):
+        if random.choice([1, 2]) == 2:
+            codecool_class.mentors = []
+            codecool_class.students = []
+            print("%s goes insane!! It killed the whole class!" % self.name)
+            print("There are %d mentors and %d students left." %
+                  (len(codecool_class.mentors), len(codecool_class.students)))
+            print()
