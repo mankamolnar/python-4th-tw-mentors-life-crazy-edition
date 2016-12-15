@@ -1,6 +1,7 @@
 import random
 from coffee_machine import *
 from hot import *
+from lama import *
 
 
 class Person:
@@ -30,8 +31,8 @@ class Person:
                 self.gold_coin = self.gold_coin - 1
                 self.energy_level += random.randint(3, 5)
 
-                print("Successfull drinking.\nGold coins changed: "+str(tmp_pre_gold_coin)+" --> "+str(self.gold_coin)+
-                      "\nEnergy level changed: "+str(tmp_pre_energy_level)+" --> "+str(self.energy_level)+"\n")
+                print("Successfull drinking.\nGold coins changed: " + str(tmp_pre_gold_coin) + " --> " + str(self.gold_coin) +
+                      "\nEnergy level changed: " + str(tmp_pre_energy_level) + " --> " + str(self.energy_level) + "\n")
 
     def play_HOT(self, game):
         print("Initializing Heads or Tails game: ")
@@ -44,3 +45,27 @@ class Person:
                 print("You have won " + str(coins_won) + " coins! Congratulations!")
             else:
                 print("Sorry, you lose!")
+
+    def pet_lama(self, lama):
+        print("%s now petting %s, the lama" % (self.last_name + " " + self.first_name, lama.name))
+        self.energy_level += 1
+        print("Wow, that was fun, energy level boosted: %d" % self.energy_level)
+        lama.pet()
+        print("%s's softness level: %d" % (lama.name, lama.softness))
+        print()
+
+    def ride_lama(self, lama):
+        print("%s now riding %s, the lama" % (self.last_name + " " + self.first_name, lama.name))
+        self.energy_level += 3
+        print("Wow, such energy boost, energy level is now: %d" % self.energy_level)
+        lama.ride()
+        print("%s's softness level: %d" % (lama.name, lama.softness))
+        print()
+
+    def massage_lama(self, lama):
+        print("%s now massaging %s in order to regain softness!" % (self.last_name + " " + self.first_name, lama.name))
+        self.energy_level -= 3
+        lama.got_massage()
+        print("It was exhausting, %s's energy level is now %d, but the softness of %s increased to %d" %
+              (self.first_name, self.energy_level, lama.name, lama.softness))
+        print()

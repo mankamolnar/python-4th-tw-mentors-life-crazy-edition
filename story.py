@@ -7,6 +7,7 @@ from presentation import Presentation
 from yoga_session import YogaSession
 import time
 from datetime import date
+from lama import *
 
 
 def main():
@@ -40,6 +41,21 @@ def main():
     fanni.print_status()
     fanni.play_HOT(hot_game)
     fanni.print_status()
+    time.sleep(5)
+
+    sanyi = Lama("Sanyi", "red")
+    sanyi.introduce_lama()
+    time.sleep(5)
+    fanni.print_status()
+    fanni.pet_lama(sanyi)
+    time.sleep(5)
+    fk = codecool_bp.find_student_by_full_name("Kukisz Fikusz")
+    fk.introduce_student()
+    fk.print_status()
+    time.sleep(5)
+    fk.ride_lama(sanyi)
+    time.sleep(5)
+    fk.massage_lama(sanyi)
     time.sleep(5)
 
     codecool_bp.print_goodbye_message()
