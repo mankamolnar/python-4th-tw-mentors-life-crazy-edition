@@ -38,6 +38,7 @@ def main():
     time.sleep(5)
 
     fanni = codecool_bp.find_student_by_full_name("Fanni Skoda")
+    fanni.introduce_student()
     fanni.print_status()
     fanni.play_HOT(hot_game)
     fanni.print_status()
