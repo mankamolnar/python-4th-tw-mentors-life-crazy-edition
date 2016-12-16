@@ -7,7 +7,7 @@ from presentation import Presentation
 from yoga_session import YogaSession
 import time
 from datetime import date
-from lama import *
+from llama import *
 
 
 def main():
@@ -44,21 +44,21 @@ def main():
     fanni.print_status()
     time.sleep(5)
 
-    sanyi = Lama("Sanyi", "red")
-    sanyi.introduce_lama()
+    sanyi = Llama("Sanyi", "red")
+    sanyi.introduce_llama()
     time.sleep(5)
     fanni.print_status()
-    fanni.pet_lama(sanyi)
+    fanni.pet_llama(sanyi)
     time.sleep(5)
     fk = codecool_bp.find_student_by_full_name("Kukisz Fikusz")
     fk.introduce_student()
     fk.print_status()
     time.sleep(5)
-    fk.ride_lama(sanyi)
+    fk.ride_llama(sanyi)
     time.sleep(5)
-    fk.massage_lama(sanyi)
+    fk.massage_llama(sanyi)
     time.sleep(5)
-    sanyi.lama_goes_insane(codecool_bp)
+    sanyi.llama_goes_insane(codecool_bp)
     codecool_bp.print_goodbye_message()
 
 if __name__ == '__main__':

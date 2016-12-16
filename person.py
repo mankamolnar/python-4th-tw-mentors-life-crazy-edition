@@ -1,7 +1,7 @@
 import random
 from coffee_machine import *
 from hot import *
-from lama import *
+from llama import *
 
 
 class Person:
@@ -46,26 +46,26 @@ class Person:
             else:
                 print("Sorry, you lose!")
 
-    def pet_lama(self, lama):
-        print("%s now petting %s, the lama" % (self.last_name + " " + self.first_name, lama.name))
+    def pet_llama(self, llama):
+        print("%s now petting %s, the llama" % (self.last_name + " " + self.first_name, llama.name))
         self.energy_level += 1
         print("Wow, that was fun, energy level boosted: %d" % self.energy_level)
-        lama.pet()
-        print("%s's softness level: %d" % (lama.name, lama.softness))
+        llama.pet()
+        print("%s's softness level: %d" % (llama.name, llama.softness))
         print()
 
-    def ride_lama(self, lama):
-        print("%s now riding %s, the lama" % (self.last_name + " " + self.first_name, lama.name))
+    def ride_llama(self, llama):
+        print("%s now riding %s, the llama" % (self.last_name + " " + self.first_name, llama.name))
         self.energy_level += 3
         print("Wow, such energy boost, energy level is now: %d" % self.energy_level)
-        lama.ride()
-        print("%s's softness level: %d" % (lama.name, lama.softness))
+        llama.ride()
+        print("%s's softness level: %d" % (llama.name, llama.softness))
         print()
 
-    def massage_lama(self, lama):
-        print("%s now massaging %s in order to regain softness!" % (self.last_name + " " + self.first_name, lama.name))
+    def massage_llama(self, llama):
+        print("%s now massaging %s in order to regain softness!" % (self.last_name + " " + self.first_name, llama.name))
         self.energy_level -= 3
-        lama.got_massage()
+        llama.got_massage()
         print("It was exhausting, %s's energy level is now %d, but the softness of %s increased to %d" %
-              (self.first_name, self.energy_level, lama.name, lama.softness))
+              (self.first_name, self.energy_level, llama.name, llama.softness))
         print()

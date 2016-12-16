@@ -2,7 +2,7 @@ import random
 from codecool_class import *
 
 
-class Lama:
+class Llama:
 
     def __init__(self, name, color):
         self.name = name
@@ -20,15 +20,15 @@ class Lama:
     def got_massage(self):
         self.softness += 3
 
-    def introduce_lama(self):
-        print("Hi, I am %s the lama. You can pet me, or ride me to gain some energy!\nBe careful, if you ride or pet me too much, I may die!" % self.name)
+    def introduce_llama(self):
+        print("Hi, I am %s the llama. You can pet me, or ride me to gain some energy!\nBe careful, if you ride or pet me too much, I may die!" % self.name)
         print()
 
     def check_if_dead(self):
         if self.softness < 1:
             print("%s is dead :(" % self.name)
 
-    def lama_goes_insane(self, codecool_class):
+    def llama_goes_insane(self, codecool_class):
         if random.choice([1, 2]) == 2:
             codecool_class.mentors = []
             codecool_class.students = []
