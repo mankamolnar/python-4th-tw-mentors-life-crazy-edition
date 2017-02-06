@@ -1,7 +1,7 @@
 import random
 from codecool_class import *
 
-
+sdsdsdsdsdsdsdsdsdsdsdsds
 class Llama:
 
     def __init__(self, name, color):
